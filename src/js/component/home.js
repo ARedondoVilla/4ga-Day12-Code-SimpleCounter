@@ -4,10 +4,14 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-export function Home() {
+export function Home(props) {
+	// console.log(props);
+
 	return (
 		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
+			<h1>
+				{props.texto} {props.seconds} {props.formato}
+			</h1>
 			<p>
 				<img src={rigoImage} />
 			</p>
