@@ -12,22 +12,28 @@ import "../styles/index.scss";
 import { Home } from "./component/home.js";
 
 //render your react application
-let contador = 0;
+let contadorSegundos = 0;
+let contadorMinutos = 0;
+
+let minutos = 0;
+let horas = 0;
 
 setInterval(function() {
-	contador += 1;
-	console.log("Otro segundo", contador);
-	let name = "Hello Rigo!";
+	contadorSegundos += 1;
+	contadorMinutos += 1;
 
-	let time;
-
-	if (contador == 1) {
-		time = "segundo";
-	} else {
-		time = "segundos";
+	if (contadorSegundos % 60 == 0) {
+		minutos += 1;
+		contadorSegundos = 0;
 	}
+
+	if (contadorMinutos % 3600 == 0) {
+		horas += 1;
+		contadorMinutos = 0;
+	}
+
 	ReactDOM.render(
-		<Home seconds={contador} texto={name} formato={time} />,
+		<Home seconds={contadorSegundos} minutes={minutos} hours={horas} />,
 		document.querySelector("#app")
 	);
 }, 1 * 1000);
