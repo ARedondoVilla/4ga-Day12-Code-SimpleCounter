@@ -1,7 +1,11 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+div {
+    border-radius: 15px;
+}
+
 .box {
-    width: 800px;
+    width: 900px;
     height: 200px;
     display: flex;
     margin: 50px auto;
@@ -16,10 +20,7 @@
     color: white;
 }
 
-.contador h1 {
-    padding: 5px;
-    background-color: black;
-}
+
 
 /* 
 

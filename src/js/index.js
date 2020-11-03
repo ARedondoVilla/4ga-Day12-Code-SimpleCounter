@@ -29,7 +29,7 @@ setInterval(function() {
 
 	if (contadorMinutos % 3600 == 0) {
 		horas += 1;
-		minutos = 0; //PENDIENTE DE REVISAR
+		minutos = 0;
 		contadorMinutos = 0;
 	}
 
